@@ -1,0 +1,18 @@
+﻿@{
+	ViewBag.Title = "Administration";
+}
+
+<h2>Administration</h2>
+
+<div class="adminButtons">
+	<div>
+		@Html.ActionLink("Product Admin", "ProductsList", null, new { @class = "btn btn-lg btn-success" })
+
+		@Html.ActionLink("Customer Admin", "CustomersList", null, new { @class = "btn btn-lg btn-primary" })
+
+		@Html.ActionLink("Order Admin", "OrdersList", null, new { @class = "btn btn-lg btn-warning" })
+	</div>
+
+
+</div>
+

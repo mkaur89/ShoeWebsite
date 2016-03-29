@@ -1,0 +1,53 @@
+﻿@model IEnumerable<SampleMVCSite.Models.Product>
+
+@{
+    ViewBag.Title = "Products List";
+}
+
+<h2>Products List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateProduct")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImageUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CostPrice)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImageUrl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CostPrice)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditProduct", new { id=item.ProductId }) |
+            @Html.ActionLink("Details", "DetailsProduct", new { id=item.ProductId }) |
+            @Html.ActionLink("Delete", "DeleteProduct", new { id=item.ProductId })
+        </td>
+    </tr>
+}
+
+</table>
+@Html.ActionLink("Back to Admin", "Index", null, new { @class = "btn btn-lg btn-success" })
+

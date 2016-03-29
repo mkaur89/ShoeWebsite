@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Shoe Splash</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+							<img src="~/Pictures/logo1.jpg" />
+               <!-- @Html.ActionLink("Shoe Splash", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })-->
+            </div>
+            <div class="navbar-collapse collapse">
+							<ul class="nav navbar-nav">
+								<li>@Html.ActionLink("Home", "Index", "Home")</li>
+								<li>@Html.ActionLink("Product", "Index", "Product")</li>
+								<li>@Html.ActionLink("Order", "Index", "Order")</li>
+								<li>@Html.ActionLink("Customer", "Index", "Customer")</li>
+								<li>@Html.ActionLink("Basket", "BasketSummary", "Product")</li>
+								<!--begin admin dropdown-->
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle-inverse" data-toggle="dropdown">Admin <br><span>Add/Remove<b class="caret"></b></span></a>
+									<ul class="dropdown-menu">
+										<li>@Html.ActionLink("Products", "ProductsList", "Admin")</li>
+										<li>@Html.ActionLink("Customers", "CustomersList", "Admin")</li>
+										<li>@Html.ActionLink("Orders", "OrdersList", "Admin")</li>
+									</ul>
+								</li><!--end admin dropdown-->
+
+								<li class="dropdown">
+									<!--dropdown menu items-->
+									<a href="#" class="dropdown-toggle-inverse" data-toggle="dropdown">Social<br /> <span>Talk to (About) Us<b class="caret"></b></span></a>
+									<ul class="dropdown-menu">
+										<!--<li class="dropdown-header">Dropdown header</li> optional dropdown header code-->
+										<li><a href="https://www.facebook.com/UC-Vape-393532660833309/" target="_blank">Facebook</a></li>
+										<!--<li class="disabled"><a href="#">Disabled link</a></li> optional disable of menu item-->
+										<li><a href="https://twitter.com/ucvape" target="_blank">Twitter</a></li>
+										<!--<li role="separator" class="divider"></li> optional separator-->
+										<li><a href="https://instagram.com/ucvape/" target="_blank">Instagram</a></li>
+									</ul>
+								</li><!--end dropdown menu items-->
+							</ul><!--end menubar-->
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

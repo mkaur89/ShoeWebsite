@@ -1,0 +1,160 @@
+﻿@{ViewBag.Title = "Index";}
+<div class="intro-block">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-3">
+				<img class="img-responsive tpad" src="../Pictures/shoes.jpg" height="350">
+			</div><!--end column1-->
+			<div class="col-xs-9">
+				<h1>Our <span class="text-muted">&raquo; Products</span></h1>
+				<p class="lead">
+					We sell different kind of women shoes of different companies.
+				</p>
+			</div><!--end column2-->
+		</div><!--end row1-->
+	</div>
+</div>
+<!-- end Intro Section-->
+<h2>
+	@Html.ActionLink("Our Products", "ProductsList")
+</h2>
+
+<div class="container padded">
+	<div class="row">
+		<div class="col-lg-12">
+			
+			<hr>
+			<p>We offer different category of shoes of brands like ADIDAS, PUMA, ALDO and STEVE MADDEN.</p>
+		</div>
+	</div><!--end row1-->
+	<div class="row tpad myTooltip">
+		<div class="col-sm6 col-md-4 bpad">
+			<a href="#" data-toggle="tooltip" class="thumbnail">
+				<figure>
+					<img src="../Pictures/flat.jpg" class="image" alt="logo">
+					<figcaption>Flats</figcaption>
+				</figure>
+			</a>
+		</div>
+		<div class="col-sm6 col-md-4 bpad">
+			<a href="#" data-toggle="tooltip" class="thumbnail">
+				<figure>
+					<img src="../Pictures/sneakers.jpg" class="image" alt="logo">
+					<figcaption>Sneakers</figcaption>
+				</figure>
+			</a>
+		</div>
+		<div class="col-sm6 col-md-4 bpad">
+			<a href="#" data-toggle="tooltip" class="thumbnail">
+				<figure>
+					<img src="../Pictures/loafers.jpg" class="image" alt="logo">
+					<figcaption>Loafers</figcaption>
+				</figure>
+			</a>
+		</div>
+		<div class="col-sm6 col-md-4 bpad">
+			<a href="#" data-toggle="tooltip" class="thumbnail">
+				<figure>
+					<img src="../Pictures/belly.jpg" class="image" alt="logo">
+					<figcaption>Belly</figcaption>
+				</figure>
+			</a>
+		</div>
+		<div class="col-sm6 col-md-4 bpad">
+			<a href="#" data-toggle="tooltip" class="thumbnail">
+				<figure>
+					<img src="../Pictures/wedges.jpg" class="image" alt="logo">
+					<figcaption>Wedges</figcaption>
+				</figure>
+			</a>
+		</div>
+		<div class="col-sm6 col-md-4 bpad">
+			<a href="#" data-toggle="tooltip" class="thumbnail">
+				<figure>
+					<img src="../Pictures/heels.jpg" class="image" alt="logo">
+					<figcaption>Heels</figcaption>
+				</figure>
+			</a>
+		</div>
+
+	</div><!--end row2-->
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel-group" id="accordian">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapseOne"><span class="glyphicon glyphicon-star"></span>Flats</a>
+						</h4>
+					</div><!--end panel heading-->
+					<div id="collapseOne" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>We sell women flat shoes of companies like CLARKS, STEVE MADDEN, LARA KAREN and CARLTON LONDON.</p>
+						</div><!--end panel body-->
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapseTwo"><span class="glyphicon glyphicon-heart"></span>Bellies</a>
+						</h4>
+					</div><!--end panel heading-->
+					<div id="collapseTwo" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>We sell women bellies of companies like STEVE MADDEN, DROTHY PERKINS, LARA KAREN and MISS BENNETT.</p>
+						</div><!--end panel body-->
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapseTwo"><span class="glyphicon glyphicon-asterisk"></span>Loafers</a>
+						</h4>
+					</div><!--end panel heading-->
+					<div id="collapseTwo" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>We sell women loafers of companies like CLARKS, STEVE MADDEN, LARA KAREN and CARLTON LONDON..</p>
+						</div><!--end panel body-->
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapseTwo"><span class="glyphicon glyphicon-bell"></span>Wedges</a>
+						</h4>
+					</div><!--end panel heading-->
+					<div id="collapseTwo" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>We sell women wedges of companies like STEVE MADDEN, DROTHY PERKINS, LARA KAREN and MISS BENNETT.</p>
+						</div><!--end panel body-->
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapseTwo"><span class="glyphicon glyphicon-star-empty"></span>Heels</a>
+						</h4>
+					</div><!--end panel heading-->
+					<div id="collapseTwo" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>We sell women Heels of companies like STEVE MADDEN, DROTHY PERKINS, LARA KAREN and MISS BENNETT.</p>
+						</div><!--end panel body-->
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapseThree"><span class="glyphicon glyphicon-heart"></span>Sneakers</a>
+						</h4>
+					</div><!--end panel heading-->
+					<div id="collapseThree" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>We sell women flat shoes of companies like NIKE, ADIDAS, PUMA and REEBOK.</p>
+						</div><!--end panel body-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!--end row3-->
+</div>
+

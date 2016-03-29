@@ -1,0 +1,48 @@
+﻿@model IEnumerable<SampleMVCSite.Models.Product>
+
+@{
+    ViewBag.Title = "Products List";
+}
+
+<h2>Products List</h2>
+
+<p>
+    <!--@Html.ActionLink("Create New", "CreateProduct")-->
+</p>
+
+<table class="table">
+    
+	<tr>
+		<th>
+			Image
+		</th>
+		<th>
+			Price
+		</th>
+		<th>
+			Product Description
+		</th>
+		<th>
+			Action Items
+		</th>
+	</tr>
+
+@foreach (var item in Model) {
+    <tr>
+			<td width="50%">
+				<img style="width:15%" height="15.5%" src="/Pictures/@item.ImageUrl" alt="@item.Description" />
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Price)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Description)
+			</td>
+			<td>
+				@Html.ActionLink("Add to Basket", "AddToBasket", new { id = item.ProductId }) |
+				@Html.ActionLink("Details", "Details", new { id = item.ProductId })
+			</td>
+    </tr>
+}
+
+</table>
